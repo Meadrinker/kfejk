@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="registerBlock">
+        <div class="registerTitle">
+            Rejestracja
+        </div>
+
+        {{ form_start(form) }}
+
+            <div>
+                {{ form_label(form.username) }}
+                {{ form_widget(form.username) }}
+                {{ form_errors(form.username) }}
+            </div>
+
+            {% for passwordField in form.password %}
+                <div>
+                    {{ form_label(passwordField) }}
+                    {{ form_widget(passwordField) }}
+                    {{ form_errors(passwordField) }}
+                </div>
+            {% endfor %}
+
+            {% for emailField in form.email %}
+                <div>
+                    {{ form_label(emailField) }}
+                    {{ form_widget(emailField) }}
+                    {{ form_errors(emailField) }}
+                </div>
+            {% endfor %}
+
+        {{ form_end(form) }}
+
+    </div>
+
+{% endblock %}

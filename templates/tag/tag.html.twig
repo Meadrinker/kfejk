@@ -1,0 +1,69 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+    {#{% for tag in tags %}#}
+        {% for img in images %}
+        <div class="imageBlock">
+            <div class="comments">
+                <a href="{{ path('image', {'image': img.id}) }}"> Komentarze({{ img.comments | length }}) </a>
+            </div>
+
+            <div class="title">
+                {{ img.title }}
+            </div>
+
+            <div class="author">
+                {{ img.author.username }}
+            </div>
+
+            <div class="tags">
+                {%  for tag in img.tags %}
+                    <a href="{{ path('tag', {'tag': tag.name}) }}"> {{ tag.name }} </a>
+                {% endfor %}
+            </div>
+
+            <div class="image">
+                <img src="{{ asset('/uploads/images/') }}{{ img.picture }}">
+            </div>
+
+            {#<div class="plus">#}
+                {#{% if app.user %}#}
+                    {#<button type="button" data-id="{{ img.id }}">+</button>#}
+                {#{% endif %}#}
+                {#<span class="amount">{{ img.ratingPlus }}</span>#}
+
+            {#</div>#}
+
+            {#<div class="minus">#}
+                {#{% if app.user %}#}
+                    {#<button type="button" data-id="{{ img.id }}">-</button>#}
+                {#{% endif %}#}
+                {#<span class="amount">{{ img.ratingMinus }}</span>#}
+            {#</div>#}
+        </div>
+        {% endfor %}
+    {#{% endfor %}#}
+{% endblock %}
+
+{#{% block bot %}#}
+    {#{% if nextNumber < pagesNumber %}#}
+        {#<div class="next">#}
+            {#<a href="/{{ nextNumber }}">Next</a>#}
+        {#</div>#}
+    {#{% endif %}#}
+
+    {#{% if previousNumber > 0 %}#}
+        {#<div class="next">#}
+            {#<a href="/{{ previousNumber }}">Previous</a>#}
+        {#</div>#}
+    {#{% elseif previousNumber == 0 %}#}
+        {#<div class="next">#}
+            {#<a href="/">Previous</a>#}
+        {#</div>#}
+    {#{% endif %}#}
+
+    {#{% include 'default/_random.html.twig' %}#}
+{#{% endblock %}#}

@@ -1,0 +1,72 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+    <div class="imageBlock">
+
+        <div class="title">
+            {{ imageEntity.title }}
+        </div>
+
+        <div class="author">
+            {{ imageEntity.author.username }}
+        </div>
+
+        <div class="tags">
+            {%  for tag in imageEntity.tags %}
+                {{ tag.name }}
+            {% endfor %}
+        </div>
+
+        <div class="image">
+            <img src="/uploads/images/{{ imageEntity.picture }}">
+        </div>
+
+        <div class="plus">
+            <button type="button">+</button>
+            {{ imageEntity.ratingPlus }}
+        </div>
+
+        <div class="minus">
+            <button type="button">-</button>
+            {{ imageEntity.ratingMinus }}
+        </div>
+    </div>
+
+    {% for comment in comments %}
+        <div class="commentsBlock">
+            <div class="author">
+                {{ comment.user.username }}
+            </div>
+
+            <div class="image">
+                {{ comment.text }}
+            </div>
+        </div>
+    {% endfor %}
+
+    <div class="commentsBlock">
+        {% if app.user %}
+            {{ form_start(form) }}
+
+                <div>
+                    {{ form_label(form.text) }}
+                    {{ form_widget(form.text) }}
+                    {{ form_errors(form.text) }}
+                </div>
+
+            {{ form_end(form) }}
+        {% else %}
+            <div>
+                Niezalogowani użytkownicy nie mogą dodawać komentarzy. <a href="/login"> Zaloguj się </a>, aby móc dodać komentarz.
+            </div>
+        {% endif %}
+    </div>
+
+{% endblock %}
+
+{% block bot %}
+    {% include 'default/_random.html.twig' %}
+{% endblock %}

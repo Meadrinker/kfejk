@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="flash-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div class="top">
+        <div class="logo">
+            <a href="/"> LOGO </a>
+        </div>
+
+        {% if app.user %}
+
+            <div class="register">
+                <a href="/logout"> Log out </a>
+            </div>
+
+            <div class="login">
+                <a href="/user"> Profile </a>
+            </div>
+
+        {% else %}
+
+            <div class="login">
+                <a href="/login"> Log in </a>
+            </div>
+
+            <div class="register">
+                <a href="/register"> Register </a>
+            </div>
+
+        {% endif %}
+
+    </div>
+
+    {% block body %}  {% endblock %}
+
+    <div class="bot">
+        {% block bot %}
+
+        {% endblock %}
+    </div>
+
+    <script>
+        $(document).ready(function() {
+
+            //kliknąć w plusa
+            $('div.plus button').click(function(){
+                button = $(this);
+                id = $(this).attr('data-id');
+                $.ajax({
+                    url: "{{ path('ajax_image_plus') }}",
+                    type: "post", //typ połączenia
+//                    contentType: 'application/json', //gdy wysyłamy dane czasami chcemy ustawić ich typ
+                    dataType: 'json', //typ danych jakich oczekujemy w odpowiedzi
+                    data: { //dane do wysyłki
+                        'image_id': id
+                    }
+                })
+                .done(function(response) {
+                    if (response.status == true) {
+                        button.next().text(response.amount);
+                    } else {
+                        alert('Już oddałeś głos');
+                    }
+
+                })
+                .fail(function() {
+                    console.warn( "Wystąpił błąd w połączeniu");
+                })
+            })
+
+            $('div.minus button').click(function(){
+                button = $(this);
+                id = $(this).attr('data-id');
+                $.ajax({
+                    url: "{{ path('ajax_image_minus') }}",
+                    type: "post", //typ połączenia
+//                    contentType: 'application/json', //gdy wysyłamy dane czasami chcemy ustawić ich typ
+                    dataType: 'json', //typ danych jakich oczekujemy w odpowiedzi
+                    data: { //dane do wysyłki
+                        'image_id': id
+                    }
+                })
+                    .done(function(response) {
+                       if (response.status == true) {
+                           button.next().text(response.amount);
+                       } else {
+                           alert('Już oddałeś głos');
+                       }
+                    })
+                    .fail(function() {
+                        console.warn( "Wystąpił błąd w połączeniu");
+                    })
+            })
+
+        })
+
+
+    </script>
+
+    </body>
+</html>

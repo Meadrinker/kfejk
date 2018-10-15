@@ -1,0 +1,7 @@
+<div class="random">
+    {% if image is defined %}
+        <a href="{{ path('random', {'id': image}) }}">Random</a>
+    {% else %}
+        <a href="{{ path('random') }}">Random</a>
+    {% endif %}
+</div>
