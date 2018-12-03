@@ -4,39 +4,26 @@
 {% endblock %}
 
 {% block body %}
-    {% for image in images %}
-        <div class="imageBlock">
-            <div class="comments">
-                <a href="/image/{{ image.id }}"> Komentarze({{ image.comments | length }}) </a>
-            </div>
-
-            <div class="title">
-                {{ image.title }}
-            </div>
-
-            <div class="author">
-                {{ image.author.username }}
-            </div>
-
-            <div class="tags">
-                {%  for tag in image.tags %}
-                    {{ tag.name }}
-                {% endfor %}
-            </div>
-
-            <div class="image">
-                <img src="{{ asset('/uploads/images/') }}{{ image.picture }}">
-            </div>
-
-            <div class="plus">
-                <button type="button">+</button>
-                {{ image.ratingPlus }}
-            </div>
-
-            <div class="minus">
-                <button type="button">-</button>
-                {{ image.ratingMinus }}
-            </div>
-        </div>
-    {% endfor %}
+    {% include "baseImagesManage.html.twig" %}
 {% endblock %}
+
+{% block bot %}
+    {% if nextNumber < pagesNumber %}
+        <div class="next">
+            <a href="/user/imagesmanage/{{ nextNumber }}">Next</a>
+        </div>
+    {% endif %}
+
+    {% if previousNumber > 0 %}
+        <div class="next">
+            <a href="/user/imagesmanage/{{ previousNumber }}">Previous</a>
+        </div>
+    {% elseif previousNumber == 0 %}
+        <div class="next">
+            <a href="/user/imagesmanage">Previous</a>
+        </div>
+    {% endif %}
+
+{% endblock %}
+
+

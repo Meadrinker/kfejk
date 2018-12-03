@@ -1,0 +1,54 @@
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+    {% for image in images %}
+        <div class="imageBlock">
+            <div class="comments">
+                <a href="{{ path('image', {'image': image.id}) }}"> Komentarze({{ image.comments | length }}) </a>
+            </div>
+
+            <div class="title">
+                {{ image.title }}
+            </div>
+
+            <div class="author">
+                {{ image.author.username }}
+            </div>
+
+            <div class="tags">
+                {%  for tag in image.tags %}
+                    <a href="{{ path('tag', {'tag': tag.name}) }}"> {{ tag.name }} </a>
+                {% endfor %}
+            </div>
+
+            <div class="image">
+                {% set imageUrl = '/uploads/images/' ~ image.picture %}
+                <img src="{{ asset(imageUrl) | imagine_filter('my_watermark_filter') }}">
+            </div>
+
+            <div class="plus">
+                {% if app.user %}
+                    <button type="button" data-id="{{ image.id }}">+</button>
+                {% endif %}
+                <span class="amount">{{ image.ratingPlus }}</span>
+
+            </div>
+
+            <div class="minus">
+                {% if app.user %}
+                    <button type="button" data-id="{{ image.id }}">-</button>
+                {% endif %}
+                <span class="amount">{{ image.ratingMinus }}</span>
+            </div>
+
+            <div class="delete">
+                <a href="{{ path('user_image_delete', {'id': image.id}) }}">DELETE</a>
+            </div>
+
+        </div>
+    {% endfor %}
+{% endblock %}
+
+

@@ -1,0 +1,85 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('datatables/datatables.css') }}">
+{% endblock %}
+
+{% block js %}
+    <script src="{{ asset('datatables/datatables.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+Witaj w panelu admina
+    <table id="mTable" class="display" style="width:85%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User</th>
+                <th>Image title</th>
+                <th>Image picture</th>
+                <th>Text</th>
+                <th>Time</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for comment in commentEntity %}
+            <tr>
+                <td>{{ comment.id }}</td>
+                <td>{{ comment.user.username }}</td>
+                <td>{{ comment.image.title }}</td>
+                <td>
+                    <div class="thumbnail">
+                        {% set imageUrl = '/uploads/images/' ~ comment.image.picture %}
+                        <a href="{{ imageUrl }}">
+                            <img src="{{ asset(imageUrl) | imagine_filter('thumb_97x97') }}">
+                        </a>
+                    </div>
+                </td>
+                <td>{{ comment.text }}</td>
+                <td>{{ comment.date | date("Y.m.d H:i:s") }}</td>
+                <td>
+                    <div class="deleteComment">
+                        <a href="{{ path('admin_comments_delete', {'id': comment.id}) }}">DELETE</a>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready( function () {
+            $('#mTable').DataTable();
+        } );
+    </script>
+
+    <script>
+
+        $(document).ready(function() {
+            $('div.deleteComment a').click(function(e){
+                e.preventDefault()
+                url = $(this).attr('href');
+                $.confirm({
+                    title: 'Ostrzeżenie!',
+                    content: 'Czy na pewno chcesz usunąć ten komentarz?',
+                    boxWidth: '10%',
+                    useBootstrap: false,
+                    buttons: {
+                        tak: function () {
+                            window.location.href = url;
+                        },
+                        anuluj: function () {
+                        }
+                    }
+                });
+
+            })
+
+        })
+
+    </script>
+
+{% endblock %}
+
+

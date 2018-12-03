@@ -84,17 +84,16 @@ class UserController extends AbstractController {
 
         if ($form->isSubmitted() && $form->isValid()) {
             $tags = $form->get('tags')->getData();
-            $tagsCollection = $this->prepareTags($image->getTags(), $tags);
-
+            $this->prepareTags($image->getTags(), $tags);
             $file = $form->get('picture')->getData();
-            $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
+            $fileExtension = $file->guessExtension();
+            $fileName = $this->generateUniqueFileName().'.'.$fileExtension;
             $file->move($this->getParameter('images_directory'), $fileName);
             $image->setPicture($fileName);
             $image->setAuthor($user);
             $image->setRatingPlus(0);
             $image->setRatingMinus(0);
             $image->setAccepted(0);
-//            $image->setTags($tagsCollection);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($image);
             $entityManager->flush();
@@ -111,10 +110,49 @@ class UserController extends AbstractController {
      * @Route("/user/imagesmanage", name="imagesManage")
      */
     public function imagesManage(UserInterface $user) {
-        $images = $this->getDoctrine()->getRepository(Image::class)->findBy(array('author' => $user->getId()));
+        $limit = 2;
+        $userId = $user->getId();
+        $images = $this->getDoctrine()->getRepository(Image::class)->selectLimitedImagesByUser($userId, $limit, 0);
+        $count = $this->getDoctrine()->getRepository(Image::class)->countImagesByUser($userId);
+        $imagesCount = $count[0][1];
+        $pagesNumber = $this->countPagesNumber($limit, $imagesCount);
+        $nextNumber = 1;
+        $previousNumber = -1;
 
         return $this->render('user/imagesManage.html.twig', [
-            'images' => $images
+            'images' => $images,
+            'nextNumber' => $nextNumber,
+            'previousNumber' => $previousNumber,
+            'pagesNumber' => $pagesNumber
+        ]);
+    }
+
+    /**
+     * @Route("/user/image/delete/{id}", name="user_image_delete")
+     */
+    public function deleteImage($id) {
+        $this->getDoctrine()->getRepository(Image::class)->deleteImage($id);
+        return $this->redirectToRoute('imagesManage');
+    }
+
+    /**
+     * @Route("/user/imagesmanage/{page}", name="imagesManagePage", requirements={"page"="\d+"})
+     */
+    public function imagesManagePage(UserInterface $user, $page) {
+        $limit = 2;
+        $userId = $user->getId();
+        $images = $this->getDoctrine()->getRepository(Image::class)->selectLimitedImagesByUser($userId, $limit, $this->calculateOffset($limit, $page));
+        $count = $this->getDoctrine()->getRepository(Image::class)->countImagesByUser($userId);
+        $imagesCount = $count[0][1];
+        $pagesNumber = $this->countPagesNumber($limit, $imagesCount);
+        $nextNumber = $page + 1;
+        $previousNumber = $page - 1;
+
+        return $this->render('user/imagesManage.html.twig', [
+            'images' => $images,
+            'nextNumber' => $nextNumber,
+            'previousNumber' => $previousNumber,
+            'pagesNumber' => $pagesNumber
         ]);
     }
 
@@ -134,4 +172,13 @@ class UserController extends AbstractController {
     private function generateUniqueFileName() {
         return md5(uniqid());
     }
+
+    private function countPagesNumber($limit, $count) {
+        return ceil($count / $limit);
+    }
+
+    private function calculateOffset($limit, $page) {
+        return $limit * $page;
+    }
+
 }
