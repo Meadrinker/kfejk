@@ -21,17 +21,22 @@
         </div>
 
         <div class="image">
-            <img src="/uploads/images/{{ imageEntity.picture }}">
+            {% set imageUrl = '/uploads/images/' ~ imageEntity.picture %}
+            <img src="{{ asset(imageUrl) | imagine_filter('my_watermark_filter') }}">
         </div>
 
         <div class="plus">
-            <button type="button">+</button>
-            {{ imageEntity.ratingPlus }}
+            {% if app.user %}
+                <button type="button" data-id="{{ imageEntity.id }}">+</button>
+            {% endif %}
+            <span class="amount">{{ imageEntity.ratingPlus }}</span>
         </div>
 
         <div class="minus">
-            <button type="button">-</button>
-            {{ imageEntity.ratingMinus }}
+            {% if app.user %}
+                <button type="button" data-id="{{ imageEntity.id }}">-</button>
+            {% endif %}
+            <span class="amount">{{ imageEntity.ratingMinus }}</span>
         </div>
     </div>
 

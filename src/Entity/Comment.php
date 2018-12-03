@@ -10,8 +10,9 @@ use Doctrine\ORM\Mapping\JoinColumn;
 use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\Table;
 
+
 /**
- * @Entity
+ * @Entity(repositoryClass="App\Repository\CommentRepository")
  * @Table(name = "comments")
  */
 class Comment {

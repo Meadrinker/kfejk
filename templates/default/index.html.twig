@@ -1,52 +1,15 @@
 {% extends "base.html.twig" %}
 
+
 {% block stylesheets %}
 {% endblock %}
 
 {% block body %}
-    {% for image in images %}
-        <div class="imageBlock">
-            <div class="comments">
-                <a href="{{ path('image', {'image': image.id}) }}"> Komentarze({{ image.comments | length }}) </a>
-            </div>
-
-            <div class="title">
-                {{ image.title }}
-            </div>
-
-            <div class="author">
-                {{ image.author.username }}
-            </div>
-
-            <div class="tags">
-                {%  for tag in image.tags %}
-                    <a href="{{ path('tag', {'tag': tag.name}) }}"> {{ tag.name }} </a>
-                {% endfor %}
-            </div>
-
-            <div class="image">
-                <img src="{{ asset('/uploads/images/') }}{{ image.picture }}">
-            </div>
-
-            <div class="plus">
-                {% if app.user %}
-                    <button type="button" data-id="{{ image.id }}">+</button>
-                {% endif %}
-                <span class="amount">{{ image.ratingPlus }}</span>
-
-            </div>
-
-            <div class="minus">
-                {% if app.user %}
-                    <button type="button" data-id="{{ image.id }}">-</button>
-                {% endif %}
-                <span class="amount">{{ image.ratingMinus }}</span>
-            </div>
-        </div>
-    {% endfor %}
+    {% include "baseImage.html.twig" %}
 {% endblock %}
 
 {% block bot %}
+
     {% if nextNumber < pagesNumber %}
         <div class="next">
             <a href="/{{ nextNumber }}">Next</a>

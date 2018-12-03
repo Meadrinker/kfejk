@@ -15,7 +15,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 
 /**
- * @Entity
+ * @Entity(repositoryClass="App\Repository\UserRepository")
  * @Table(name = "users")
  * @UniqueEntity("username")
  * @UniqueEntity("email")
@@ -145,7 +145,7 @@ class User implements UserInterface, \Serializable {
     }
 
     public function getRoles() {
-        return array('ROLE_USER');
+        return [$this->getRole()->getName()];
     }
 
     public function eraseCredentials() {

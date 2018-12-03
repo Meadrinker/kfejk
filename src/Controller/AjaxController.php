@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dawid
- * Date: 05.10.18
- * Time: 12:36
- */
 
 namespace App\Controller;
 
@@ -25,11 +19,6 @@ class AjaxController extends AbstractController {
     public function addPlus(Request $request, UserInterface $user) {
         $imageId = $request->get('image_id');
         $userId = $user->getId();
-//        $image = $this->getDoctrine()->getRepository(Image::class)->find($imageId);
-//        $ratedImage = new RatedImages();
-//        $ratedImage->setUser($user);
-//        $ratedImage->setImage($image);
-
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->getConnection()->beginTransaction();
         try {
@@ -42,7 +31,6 @@ class AjaxController extends AbstractController {
         }
         $entityManager->clear(Image::class);
         $image = $this->getDoctrine()->getRepository(Image::class)->find($imageId);
-//        die($imageId);
         return new JsonResponse(array('status' => true, 'amount' => $image->getRatingPlus()));
 
     }
@@ -65,7 +53,9 @@ class AjaxController extends AbstractController {
         }
         $entityManager->clear(Image::class);
         $image = $this->getDoctrine()->getRepository(Image::class)->find($imageId);
-//        die($imageId);
         return new JsonResponse(array('status' => true, 'amount' => $image->getRatingMinus()));
     }
+
+
+
 }

@@ -34,3 +34,6 @@ services:
     login_handler:
         class: App\Service\loginHandler
         arguments: ['@router', '@doctrine.orm.entity_manager', '@service_container']
+
+    Liip\ImagineBundle\Service\FilterService:
+        alias: 'liip_imagine.service.filter'

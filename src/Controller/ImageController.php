@@ -4,9 +4,6 @@ namespace App\Controller;
 
 use App\Entity\Comment;
 use App\Entity\Image;
-use App\Entity\Role;
-use App\Entity\Tag;
-use App\Entity\User;
 use App\Form\CommentType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -41,11 +38,4 @@ class ImageController extends AbstractController{
             'form' => $form->createView()
         ]);
     }
-
-
-
-
-
-
-
 }

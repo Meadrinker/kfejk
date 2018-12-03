@@ -4,8 +4,11 @@
         <meta charset="UTF-8">
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-        <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('css/jquery-confirm.css') }}">
         {% block stylesheets %}{% endblock %}
+        <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+        <script src="{{ asset('js/jquery-confirm.js') }}"></script>
+        {% block js %}{% endblock %}
     </head>
     <body>
 
@@ -22,15 +25,27 @@
             <a href="/"> LOGO </a>
         </div>
 
+        <div class="logo">
+            <a href="/waitingroom"> Waiting Room </a>
+        </div>
+
         {% if app.user %}
 
             <div class="register">
                 <a href="/logout"> Log out </a>
             </div>
 
+        {% if is_granted('ROLE_USER') %}
             <div class="login">
                 <a href="/user"> Profile </a>
             </div>
+        {% endif %}
+
+        {% if is_granted('ROLE_ADMIN') %}
+            <div class="login">
+                <a href="/admin"> Admin Panel </a>
+            </div>
+        {% endif %}
 
         {% else %}
 
@@ -56,19 +71,14 @@
 
     <script>
         $(document).ready(function() {
-
-            //kliknąć w plusa
             $('div.plus button').click(function(){
                 button = $(this);
                 id = $(this).attr('data-id');
                 $.ajax({
                     url: "{{ path('ajax_image_plus') }}",
-                    type: "post", //typ połączenia
-//                    contentType: 'application/json', //gdy wysyłamy dane czasami chcemy ustawić ich typ
-                    dataType: 'json', //typ danych jakich oczekujemy w odpowiedzi
-                    data: { //dane do wysyłki
-                        'image_id': id
-                    }
+                    type: "post",
+                    dataType: 'json',
+                    data: {'image_id': id}
                 })
                 .done(function(response) {
                     if (response.status == true) {
@@ -88,27 +98,76 @@
                 id = $(this).attr('data-id');
                 $.ajax({
                     url: "{{ path('ajax_image_minus') }}",
-                    type: "post", //typ połączenia
-//                    contentType: 'application/json', //gdy wysyłamy dane czasami chcemy ustawić ich typ
-                    dataType: 'json', //typ danych jakich oczekujemy w odpowiedzi
-                    data: { //dane do wysyłki
-                        'image_id': id
-                    }
+                    type: "post",
+                    dataType: 'json',
+                    data: {'image_id': id}
                 })
-                    .done(function(response) {
+                .done(function(response) {
                        if (response.status == true) {
                            button.next().text(response.amount);
                        } else {
                            alert('Już oddałeś głos');
                        }
                     })
-                    .fail(function() {
+                .fail(function() {
                         console.warn( "Wystąpił błąd w połączeniu");
                     })
             })
 
         })
 
+
+    </script>
+
+    <script>
+
+        $(document).ready(function() {
+            $('div.delete a').click(function(e){
+                e.preventDefault()
+                url = $(this).attr('href');
+                $.confirm({
+                    title: 'Ostrzeżenie!',
+                    content: 'Czy na pewno chcesz usunąć ten obrazek?',
+                    boxWidth: '10%',
+                    useBootstrap: false,
+                    buttons: {
+                        tak: function () {
+                            window.location.href = url;
+                        },
+                        anuluj: function () {
+                        }
+                    }
+                });
+
+            })
+
+        })
+
+    </script>
+
+    <script>
+
+        $(document).ready(function() {
+            $('div.accept a').click(function(e){
+                e.preventDefault()
+                url = $(this).attr('href');
+                $.confirm({
+                    title: 'Ostrzeżenie!',
+                    content: 'Czy na pewno chcesz przenieść ten obrazek?',
+                    boxWidth: '10%',
+                    useBootstrap: false,
+                    buttons: {
+                        tak: function () {
+                            window.location.href = url;
+                        },
+                        anuluj: function () {
+                        }
+                    }
+                });
+
+            })
+
+        })
 
     </script>
 

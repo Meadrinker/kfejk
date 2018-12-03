@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+    {% include "baseImage.html.twig" %}
+{% endblock %}
+
+{% block bot %}
+
+    {% if nextNumber < pagesNumber %}
+        <div class="next">
+            <a href="/waitingroom/{{ nextNumber }}">Next</a>
+        </div>
+    {% endif %}
+
+    {% if previousNumber > 0 %}
+        <div class="next">
+            <a href="/waitingroom/{{ previousNumber }}">Previous</a>
+        </div>
+    {% elseif previousNumber == 0 %}
+        <div class="next">
+            <a href="/waitingroom">Previous</a>
+        </div>
+    {% endif %}
+
+    {% include 'default/_random.html.twig' %}
+{% endblock %}

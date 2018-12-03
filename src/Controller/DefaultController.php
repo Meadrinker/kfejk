@@ -3,11 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Image;
-use App\Entity\Role;
-use App\Entity\Tag;
-use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController {
@@ -17,9 +13,9 @@ class DefaultController extends AbstractController {
      */
     public function index() {
         $limit = 2;
-        $images = $this->getDoctrine()->getRepository(Image::class)->selectLimitedImages($limit, 0);
+        $images = $this->getDoctrine()->getRepository(Image::class)->selectLimitedImagesByAccept(1, $limit, 0);
         $random = $this->getDoctrine()->getRepository(Image::class)->randomImageId();
-        $count = $this->getDoctrine()->getRepository(Image::class)->countImages();
+        $count = $this->getDoctrine()->getRepository(Image::class)->countImagesByAccept(1);
         $imagesCount = $count[0][1];
         $pagesNumber = $this->countPagesNumber($limit, $imagesCount);
         $nextNumber = 1;
@@ -40,9 +36,9 @@ class DefaultController extends AbstractController {
      */
     public function indexPage($page) {
         $limit = 2;
-        $images = $this->getDoctrine()->getRepository(Image::class)->selectLimitedImages($limit, $this->calculateOffset($limit, $page));
+        $images = $this->getDoctrine()->getRepository(Image::class)->selectLimitedImagesByAccept(1, $limit, $this->calculateOffset($limit, $page));
         $random = $this->getDoctrine()->getRepository(Image::class)->randomImageId();
-        $count = $this->getDoctrine()->getRepository(Image::class)->countImages();
+        $count = $this->getDoctrine()->getRepository(Image::class)->countImagesByAccept(1);
         $imagesCount = $count[0][1];
         $pagesNumber = $this->countPagesNumber($limit, $imagesCount);
         $nextNumber = $page + 1;
@@ -55,6 +51,24 @@ class DefaultController extends AbstractController {
             'pagesNumber' => $pagesNumber,
             'random' => $random
         ]);
+    }
+
+    /**
+     * @Route("/image/accept/{id}", name="image_accept")
+     */
+    public function acceptImage($id) {
+        $image = $this->getDoctrine()->getRepository(Image::class)->find($id);
+        $acceptStatus = $image->getAccepted();
+
+        if ($acceptStatus == 1) {
+            $image->setAccepted(0);
+        } else {
+            $image->setAccepted(1);
+        }
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($image);
+        $entityManager->flush();
+        return $this->redirectToRoute('index');
     }
 
     /**
