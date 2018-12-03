@@ -19,8 +19,6 @@ class AjaxImagesController extends AbstractController {
     public function images(Request $request, FilterService $filterService) {
         $dataTableRequest = new DataTableRequest($request->request->all());
         $draw = $dataTableRequest->getDraw();
-        $columnName = $dataTableRequest->getOrderColumn();
-        $dir = $dataTableRequest->getOrderDir();
         $search = $dataTableRequest->getSearch();
         $data = $this->prepareBaseData($dataTableRequest, $filterService);
         $total = $this->getDoctrine()->getRepository(Image::class)->countImages();

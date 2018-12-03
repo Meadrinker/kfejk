@@ -2,166 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="167c3d8e-b887-4abe-bf14-32be9af764e8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/datatables/images/sort_asc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/datatables/images/sort_both.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/datatables/images/sort_desc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/my_watermark_filter/uploads/images/0184382f2bdf37a4ed95e446f6d8cb4d.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/my_watermark_filter/uploads/images/19cdbb46be82454a9b048c4cbecc54c1.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/my_watermark_filter/uploads/images/21888635c8ae7a9ff4923d3f02f41a17.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/my_watermark_filter/uploads/images/29d37d0f169fbe1556176b15582672f5.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/my_watermark_filter/uploads/images/8cb9e9a957a44aff7f018421cecae8ba.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/my_watermark_filter/uploads/images/990ed4aecae954572fe4e4a2678bd1d3.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/my_watermark_filter/uploads/images/9eedf42567b999a27a8ed3dc0dcee67c.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/my_watermark_filter/uploads/images/afcd20e71bb1bbccf8f88f7542778504.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/my_watermark_filter/uploads/images/fa13d5571801eff936091406247298fc.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/thumb_97x97/uploads/images/0184382f2bdf37a4ed95e446f6d8cb4d.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/thumb_97x97/uploads/images/19cdbb46be82454a9b048c4cbecc54c1.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/thumb_97x97/uploads/images/21888635c8ae7a9ff4923d3f02f41a17.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/thumb_97x97/uploads/images/29d37d0f169fbe1556176b15582672f5.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/thumb_97x97/uploads/images/8cb9e9a957a44aff7f018421cecae8ba.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/thumb_97x97/uploads/images/990ed4aecae954572fe4e4a2678bd1d3.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/thumb_97x97/uploads/images/9eedf42567b999a27a8ed3dc0dcee67c.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/thumb_97x97/uploads/images/afcd20e71bb1bbccf8f88f7542778504.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/media/cache/thumb_97x97/uploads/images/fa13d5571801eff936091406247298fc.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/0184382f2bdf37a4ed95e446f6d8cb4d.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/1515deee35a7e0a4b9a9f86da90f7ba5.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/21888635c8ae7a9ff4923d3f02f41a17.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/29d37d0f169fbe1556176b15582672f5.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/313a0079d3070c2a19cd046c58e61740.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/3dfea34109f22c32d2c41f02d4ace281.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/4b43bcf945ed4fb458381fffed048f11.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/7a90043ee99f584e7df7aa2a5b8795b0.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/7f2a1622a6a3ba1420365ca18408778b.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/8cb9e9a957a44aff7f018421cecae8ba.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/8d03dd1c314cc60c0ca3d890068b79e8.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/9eedf42567b999a27a8ed3dc0dcee67c.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/a6dd1d0163f29894362114e81b79996c.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/aceb76f680088962f143719e0b471c7f.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/afcd20e71bb1bbccf8f88f7542778504.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/b8c562c1646552f0c102c7e63b71bdc2.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/bf81083cda38ada8717e18d1e2d29dec.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/db0bc853a183deac7690ebb39e32b203.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/e41f0d4b8bcf0422eae0e51ee7b4ddc6.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/e5cc88297a27c81a10d5f159fea0359e.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/fa13d5571801eff936091406247298fc.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/fd703d79241b2285745075073d944bd4.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Resources/watermark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/packages/imagine.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/routes/dtc_grid.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/jquery-confirm.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/jquery.fancybox.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/datatables/datatables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/datatables/datatables.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/datatables/polish.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery-confirm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.fancybox.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/3e9b2def7906e0f24de3228affe39d75.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/75b1dbb2711a6b8cad2b84ef03e9828e.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/824f7f9c67e0a970683baa94388be482.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/db7744386b180675dd6ef6a9d2acc8ee.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/e161988d397d98ef9964f02ac165df10.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/images/e81f2b20ef275735951e61ed9938ef4c.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/AjaxImagesController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/WaitingRoomController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DataTables/DataTableRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Repository/CommentRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Repository/TagRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/admin.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/comments.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/images.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin/users.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/baseImage.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/baseImagesManage.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/waiting/waiting.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/images/19cdbb46be82454a9b048c4cbecc54c1.jpeg" afterPath="$PROJECT_DIR$/public/uploads/images/19cdbb46be82454a9b048c4cbecc54c1.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/images/6db1219bd81d0bc8ec75d4607783ca2a.jpeg" afterPath="$PROJECT_DIR$/public/uploads/images/6db1219bd81d0bc8ec75d4607783ca2a.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/images/990ed4aecae954572fe4e4a2678bd1d3.jpeg" afterPath="$PROJECT_DIR$/public/uploads/images/990ed4aecae954572fe4e4a2678bd1d3.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/uploads/images/c0cab240ca9d5a2082ec9faa7c9116fc.jpeg" afterPath="$PROJECT_DIR$/public/uploads/images/c0cab240ca9d5a2082ec9faa7c9116fc.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env.dist" afterPath="$PROJECT_DIR$/.env.dist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/kfejk2.iml" afterPath="$PROJECT_DIR$/.idea/kfejk2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/bundles.php" afterPath="$PROJECT_DIR$/config/bundles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/dev/debug.yaml" afterPath="$PROJECT_DIR$/config/packages/dev/debug.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/dev/easy_log_handler.yaml" afterPath="$PROJECT_DIR$/config/packages/dev/easy_log_handler.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/dev/monolog.yaml" afterPath="$PROJECT_DIR$/config/packages/dev/monolog.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/dev/routing.yaml" afterPath="$PROJECT_DIR$/config/packages/dev/routing.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" afterPath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/framework.yaml" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" afterPath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" afterPath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/routing.yaml" afterPath="$PROJECT_DIR$/config/packages/routing.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/security.yaml" afterPath="$PROJECT_DIR$/config/packages/security.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" afterPath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/test/framework.yaml" afterPath="$PROJECT_DIR$/config/packages/test/framework.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/test/monolog.yaml" afterPath="$PROJECT_DIR$/config/packages/test/monolog.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/test/routing.yaml" afterPath="$PROJECT_DIR$/config/packages/test/routing.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" afterPath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/test/web_profiler.yaml" afterPath="$PROJECT_DIR$/config/packages/test/web_profiler.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/translation.yaml" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/twig.yaml" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/validator.yaml" afterPath="$PROJECT_DIR$/config/packages/validator.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.yaml" afterPath="$PROJECT_DIR$/config/routes.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes/annotations.yaml" afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes/dev/twig.yaml" afterPath="$PROJECT_DIR$/config/routes/dev/twig.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" afterPath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/services.yaml" afterPath="$PROJECT_DIR$/config/services.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml.dist" afterPath="$PROJECT_DIR$/phpunit.xml.dist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery-3.3.1.min.js" afterPath="$PROJECT_DIR$/public/js/jquery-3.3.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/.gitignore" afterPath="$PROJECT_DIR$/src/Controller/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/AjaxController.php" afterPath="$PROJECT_DIR$/src/Controller/AjaxController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/AuthorizationController.php" afterPath="$PROJECT_DIR$/src/Controller/AuthorizationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/ImageController.php" afterPath="$PROJECT_DIR$/src/Controller/ImageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/TagController.php" afterPath="$PROJECT_DIR$/src/Controller/TagController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/.gitignore" afterPath="$PROJECT_DIR$/src/Entity/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Comment.php" afterPath="$PROJECT_DIR$/src/Entity/Comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Image.php" afterPath="$PROJECT_DIR$/src/Entity/Image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/RatedImages.php" afterPath="$PROJECT_DIR$/src/Entity/RatedImages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Role.php" afterPath="$PROJECT_DIR$/src/Entity/Role.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Tag.php" afterPath="$PROJECT_DIR$/src/Entity/Tag.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/User.php" afterPath="$PROJECT_DIR$/src/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Form/CommentType.php" afterPath="$PROJECT_DIR$/src/Form/CommentType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Form/ImageAddType.php" afterPath="$PROJECT_DIR$/src/Form/ImageAddType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Form/MailType.php" afterPath="$PROJECT_DIR$/src/Form/MailType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Form/NewPasswordType.php" afterPath="$PROJECT_DIR$/src/Form/NewPasswordType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Form/RegisterType.php" afterPath="$PROJECT_DIR$/src/Form/RegisterType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Kernel.php" afterPath="$PROJECT_DIR$/src/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Migrations/.gitignore" afterPath="$PROJECT_DIR$/src/Migrations/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repository/.gitignore" afterPath="$PROJECT_DIR$/src/Repository/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repository/ImageRepository.php" afterPath="$PROJECT_DIR$/src/Repository/ImageRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repository/RatedImagesRepository.php" afterPath="$PROJECT_DIR$/src/Repository/RatedImagesRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Service/loginHandler.php" afterPath="$PROJECT_DIR$/src/Service/loginHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/symfony.lock" afterPath="$PROJECT_DIR$/symfony.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/authorization/_register.html.twig" afterPath="$PROJECT_DIR$/templates/authorization/_register.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/authorization/login.html.twig" afterPath="$PROJECT_DIR$/templates/authorization/login.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/authorization/register.html.twig" afterPath="$PROJECT_DIR$/templates/authorization/register.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/_random.html.twig" afterPath="$PROJECT_DIR$/templates/default/_random.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/default/index.html.twig" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/image/image.html.twig" afterPath="$PROJECT_DIR$/templates/image/image.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tag/tag.html.twig" afterPath="$PROJECT_DIR$/templates/tag/tag.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user/addImage.html.twig" afterPath="$PROJECT_DIR$/templates/user/addImage.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user/imagesManage.html.twig" afterPath="$PROJECT_DIR$/templates/user/imagesManage.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user/mail.html.twig" afterPath="$PROJECT_DIR$/templates/user/mail.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user/password.html.twig" afterPath="$PROJECT_DIR$/templates/user/password.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user/user.html.twig" afterPath="$PROJECT_DIR$/templates/user/user.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/.gitignore" afterPath="$PROJECT_DIR$/tests/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/.gitignore" afterPath="$PROJECT_DIR$/translations/.gitignore" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -549,24 +390,24 @@
       <workItem from="1543603843177" duration="2300000" />
       <workItem from="1543655112722" duration="12585000" />
       <workItem from="1543742749171" duration="16940000" />
-      <workItem from="1543841890752" duration="7084000" />
+      <workItem from="1543841890752" duration="8201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="496988000" />
+    <option name="totallyTimeSpent" value="498105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="25" width="1920" height="990" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24546425" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24546425" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
