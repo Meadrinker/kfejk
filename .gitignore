@@ -15,4 +15,11 @@
 /.web-server-pid
 ###< symfony/web-server-bundle ###
 
-.idea/
+###> idea ###
+/.idea/*
+###< idea ###
+
+###> media ###
+/public/media/*
+/public/uploads/*
+###< media ###
