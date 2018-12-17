@@ -2,15 +2,17 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('datatables/datatables.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
 {% endblock %}
 
 {% block js %}
     <script src="{{ asset('datatables/datatables.js') }}"></script>
+    <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
 {% endblock %}
 
 {% block body %}
-Witaj w panelu admina
-    <table id="mTable" class="display" style="width:85%">
+    Witaj w panelu admina
+    <table id="example" class="display" style="width:75%">
         <thead>
             <tr>
                 <th>Id</th>
@@ -21,55 +23,39 @@ Witaj w panelu admina
                 <th>Delete</th>
             </tr>
         </thead>
-        <tbody>
-        {% for user in userEntity %}
-            <tr>
-                <td>{{ user.id }}</td>
-                <td>{{ user.username }}</td>
-                <td>{{ user.password }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.role.name }}</td>
-                <td>
-                    <div class="deleteUser">
-                        <a href="{{ path('admin_users_delete', {'id': user.id}) }}">DELETE</a>
-                    </div>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
     </table>
 
     <script>
-        $(document).ready( function () {
-            $('#mTable').DataTable();
+        $(document).ready(function() {
+            $('#example').DataTable( {
+                initComplete: function(){
+                    var api = this.api();
+                    $('#example_filter input')
+                        .off('.DT')
+                        .on('keyup.DT', function (e) {
+                            if (e.keyCode == 13) {
+                                api.search(this.value).draw();
+                            }
+                        });
+                },
+                "processing": true,
+                "serverSide": true,
+                "language": {
+                    "url": "{{ asset('datatables/polish.json') }}"
+                },
+                "ajax": {
+                    url: '{{ path('admin_imagesgrid') }}',
+                    type: 'POST'
+                },
+                "columnDefs": [
+                    { "orderable": false, "targets": [1, 8, 9] }
+                ]
+            });
+
         } );
     </script>
 
-    <script>
 
-        $(document).ready(function() {
-            $('div.deleteUser a').click(function(e){
-                e.preventDefault()
-                url = $(this).attr('href');
-                $.confirm({
-                    title: 'Ostrzeżenie!',
-                    content: 'Czy na pewno chcesz usunąć tego użytkownika?',
-                    boxWidth: '10%',
-                    useBootstrap: false,
-                    buttons: {
-                        tak: function () {
-                            window.location.href = url;
-                        },
-                        anuluj: function () {
-                        }
-                    }
-                });
-
-            })
-
-        })
-
-    </script>
 
 {% endblock %}
 
