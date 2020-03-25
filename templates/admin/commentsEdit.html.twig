@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="addImageBlock">
+
+        {{ form_start(form) }}
+
+            <div>
+                {{ form_label(form.text) }}
+                {{ form_widget(form.text) }}
+                {{ form_errors(form.text) }}
+            </div>
+
+        {{ form_end(form) }}
+
+    </div>
+
+{% endblock %}

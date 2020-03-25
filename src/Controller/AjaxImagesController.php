@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\DataTables\DataTableRequest;
+use App\DataTables\DataTableImagesRequest;
 use App\Entity\Image;
 use Liip\ImagineBundle\Service\FilterService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,7 +17,7 @@ class AjaxImagesController extends AbstractController {
      * @Route("/admin/imagesgrid", name="admin_imagesgrid")
      */
     public function images(Request $request, FilterService $filterService) {
-        $dataTableRequest = new DataTableRequest($request->request->all());
+        $dataTableRequest = new DataTableImagesRequest($request->request->all());
         $draw = $dataTableRequest->getDraw();
         $search = $dataTableRequest->getSearch();
         $data = $this->prepareBaseData($dataTableRequest, $filterService);
@@ -67,7 +67,8 @@ class AjaxImagesController extends AbstractController {
                 $image->getAccepted(),
                 $image->getTime()->format('Y-m-d H:i:s'),
                 $preparedTags,
-                '<a href="images/delete/' . $image->getId() . '">DELETE</a>'
+                '<a href="images/delete/' . $image->getId() . '">DELETE</a>',
+                '<a href="images/edit/' . $image->getId() . '">EDIT</a>'
             ];
         }
         return $data;

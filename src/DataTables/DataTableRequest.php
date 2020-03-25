@@ -2,9 +2,9 @@
 
 namespace App\DataTables;
 
-class DataTableRequest {
+abstract class DataTableRequest {
 
-    private $data;
+    protected $data;
 
     public function __construct(array $data) {
         $this->data = $data;
@@ -38,24 +38,7 @@ class DataTableRequest {
         return null;
     }
 
-    public function getOrderColumn() {
-        if (isset($this->data['order'][0]['column'])) {
-            $columnArray = [
-                0 => 'i.id',
-                1 => 'i.picture',
-                2 => 'i.title',
-                3 => 'u.username',
-                4 => 'i.ratingPlus',
-                5 => 'i.ratingMinus',
-                6 => 'i.accepted',
-                7 => 'i.time',
-
-            ];
-            $columnName = $columnArray[$this->data['order'][0]['column']];
-            return $columnName;
-        }
-        return null;
-    }
+    abstract public function getOrderColumn();
 
     public function getSearch() {
         if (isset($this->data['search']['value'])) {

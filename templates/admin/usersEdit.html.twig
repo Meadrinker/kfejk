@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="addImageBlock">
+
+        {{ form_start(form) }}
+
+            <div>
+                {{ form_label(form.username) }}
+                {{ form_widget(form.username) }}
+                {{ form_errors(form.username) }}
+            </div>
+
+            <div>
+                {{ form_label(form.email) }}
+                {{ form_widget(form.email) }}
+                {{ form_errors(form.email) }}
+            </div>
+
+            <div>
+                {{ form_label(form.role) }}
+                {{ form_widget(form.role) }}
+                {{ form_errors(form.role) }}
+            </div>
+
+        {{ form_end(form) }}
+
+    </div>
+
+{% endblock %}

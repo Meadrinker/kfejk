@@ -23,10 +23,8 @@ class AdminController extends AbstractController {
      * @Route("/admin/users", name="admin_users")
      */
     public function users() {
-        $userEntity = $this->getDoctrine()->getRepository(User::class)->findAll();
 
         return $this->render('admin/users.html.twig', [
-            'userEntity' => $userEntity
         ]);
     }
 
@@ -34,10 +32,8 @@ class AdminController extends AbstractController {
      * @Route("/admin/comments", name="admin_comments")
      */
     public function comments() {
-        $commentEntity = $this->getDoctrine()->getRepository(Comment::class)->findAll();
 
         return $this->render('admin/comments.html.twig', [
-            'commentEntity' => $commentEntity
         ]);
     }
 
